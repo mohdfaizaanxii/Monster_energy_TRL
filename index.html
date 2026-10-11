@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MONSTER ENERGY® | Unleash The Beast | Official E-Commerce Store</title>
+  <meta name="description"
+    content="Official Monster Energy e-commerce store featuring the all-new Ultra Peachy Keen, signature energy blends, exclusive 12-pack custom vaults, and athlete gear. Unleash the beast.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,600;0,700;1,700&family=Outfit:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&family=Bebas+Neue&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="SplitFlapText.css">
+  <link rel="stylesheet" href="InfiniteMenu.css">
+  <link rel="stylesheet" href="PillNav.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+
+<body class="dark-theme">
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-ticker">
+      <span>🔥 <strong>NOW IN STOCK:</strong> MONSTER ORIGINAL GREEN (500ML)</span>
+      <span class="ticker-dot">•</span>
+      <span>⚡ FREE 2-DAY EXPRESS SHIPPING ON VAULT BUNDLES OVER ₹999</span>
+      <span class="ticker-dot">•</span>
+      <span>🐺 USE CODE <strong>UNLEASH15</strong> FOR 15% OFF YOUR FIRST ORDER</span>
+      <span class="ticker-dot">•</span>
+      <span>🔥 <strong>NOW IN STOCK:</strong> MONSTER ORIGINAL GREEN (500ML)</span>
+      <span class="ticker-dot">•</span>
+      <span>⚡ FREE 2-DAY EXPRESS SHIPPING ON VAULT BUNDLES OVER ₹999</span>
+      <span class="ticker-dot">•</span>
+      <span>🐺 USE CODE <strong>UNLEASH15</strong> FOR 15% OFF YOUR FIRST ORDER</span>
+    </div>
+  </div>
+
+  <!-- React Bits <PillNav /> Navigation Bar -->
+  <header class="pill-nav-header-container" id="navbar">
+    <div id="pill-nav-root"></div>
+
+    <!-- Header Actions Docked into PillNav Shell -->
+    <div id="header-action-utilities" class="header-actions">
+
+
+      <!-- Quick Buy CTA -->
+      <a href="#flavors-section" class="btn-nav-shop" id="nav-shop-btn">SHOP NOW</a>
+
+      <!-- Cart Trigger Button -->
+      <button class="cart-trigger-btn" id="open-cart-btn" aria-label="Open Cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="cart-icon">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count-badge" id="cart-badge" style="display: none;"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ======================================================== -->
+  <!-- HERO SCROLLYTELLING EXPERIENCE (Canvas Scrubbing & Parallax) -->
+  <!-- ======================================================== -->
+  <section class="scrolly-container" id="hero-experience">
+    <!-- Sticky Viewport Stage (100vh pinned) -->
+    <div class="scrolly-stage">
+
+      <!-- Ambient Lighting & Glow Orbs -->
+      <div class="ambient-glow glow-peach"></div>
+      <div class="ambient-glow glow-green"></div>
+      <div class="ambient-grid"></div>
+
+      <!-- Atmospheric Ambient Background Canvas & Image Backdrop -->
+      <canvas id="ambient-backdrop-canvas" class="ambient-backdrop-canvas"></canvas>
+      <div class="hero-ambient-backdrop" id="hero-ambient-backdrop"></div>
+
+      <!-- Scrolly Canvas: Paints 84 frames smoothly as user scrolls -->
+      <div class="canvas-wrapper" id="canvas-wrapper">
+        <canvas id="scrolly-canvas"></canvas>
+      </div>
+
+
+
+      <!-- Narrative Overlay Phase 1 (0% - 25% Scroll) -->
+      <div class="story-overlay step-1" id="story-step-1">
+        <div class="overlay-inner">
+          <div class="badge-pill beast-badge">
+            <span class="blinking-dot"></span> ORIGINAL GREEN • 160MG CAFFEINE
+          </div>
+          <h1 class="hero-glitch-title" data-text="UNLEASH THE BEAST">
+            UNLEASH<br><span class="highlight-green">THE BEAST.</span>
+          </h1>
+          <p class="hero-tagline">
+            Feel the raw adrenaline surge. 160mg of unadulterated focus, iconic citrus bite, and the legendary energy
+            blend that ignited a global rebellion.
+          </p>
+          <div class="hero-actions-group">
+            <a href="#flavors-section" class="btn-primary btn-hero-explore">EXPLORE FLAVORS</a>
+            <a href="#vault-builder" class="btn-secondary btn-hero-specs">CUSTOM VAULT</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Narrative Overlay Phase 2 (25% - 55% Scroll): Telemetry Cards Parallax -->
+      <div class="story-overlay step-2" id="story-step-2">
+        <div class="telemetry-grid">
+          <!-- Left Telemetry Card -->
+          <div class="telemetry-card card-left">
+            <div class="card-chip">ORIGINAL HERITAGE</div>
+            <h3 class="card-heading">CLASSIC CITRUS PUNCH</h3>
+            <p class="card-desc">Tear into the meanest energy drink on the planet. Crisp citrus punch, smooth finish,
+              and zero compromise.</p>
+            <div class="metric-meter-list">
+              <div class="meter-row">
+                <span>Adrenaline Intensity</span>
+                <div class="meter-bar">
+                  <div class="meter-fill" style="width: 100%;"></div>
+                </div>
+                <span class="meter-val">100%</span>
+              </div>
+              <div class="meter-row">
+                <span>Carbonation Spark</span>
+                <div class="meter-bar">
+                  <div class="meter-fill" style="width: 95%;"></div>
+                </div>
+                <span class="meter-val">95%</span>
+              </div>
+              <div class="meter-row">
+                <span>Taurine Drive</span>
+                <div class="meter-bar">
+                  <div class="meter-fill" style="width: 90%;"></div>
+                </div>
+                <span class="meter-val">90%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Telemetry Card -->
+          <div class="telemetry-card card-right">
+            <div class="card-chip chip-green">MONSTER ENERGY MATRIX</div>
+            <h3 class="card-heading">PERFORMANCE FUEL</h3>
+            <div class="spec-table">
+              <div class="spec-row">
+                <span class="spec-k">CAFFEINE</span>
+                <span class="spec-v text-neon">160 MG</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-k">CALORIES</span>
+                <span class="spec-v">210 CAL</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-k">TOTAL ENERGY</span>
+                <span class="spec-v text-neon">MAX IMPACT</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-k">B-VITAMINS</span>
+                <span class="spec-v">B3, B5, B6, B12</span>
+              </div>
+              <div class="spec-row">
+                <span class="spec-k">ENDURANCE</span>
+                <span class="spec-v">TAURINE + L-CARNITINE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Narrative Overlay Phase 3 (55% - 75% Scroll): Explosive 3D Splash Callouts -->
+      <div class="story-overlay step-3" id="story-step-3">
+        <div class="callout-wrapper">
+          <div class="floating-callout pin-left">
+            <div class="callout-dot"></div>
+            <div class="callout-line"></div>
+            <div class="callout-bubble">
+              <span class="callout-tag">AERODYNAMIC ICE CHILL</span>
+              <h4>DOUBLE COLD CONDENSATION</h4>
+              <p>Chilled to 34°F for instant cryogenic refreshment.</p>
+            </div>
+          </div>
+          <div class="floating-callout pin-right">
+            <div class="callout-dot"></div>
+            <div class="callout-line"></div>
+            <div class="callout-bubble">
+              <span class="callout-tag">THE CLAW BRAND</span>
+              <h4>TEXTURED EMBOSSED CAN</h4>
+              <p>Tactile grip engineered for motocross gloves & intense gaming.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Narrative Overlay Phase 4 (75% - 100% Scroll): Instant Buy Lock & E-Commerce Module -->
+      <div class="story-overlay step-4" id="story-step-4">
+        <div class="hero-buy-box">
+          <div class="buy-box-header">
+            <span class="badge-drop">FEATURED DROP</span>
+            <div class="buy-rating">★★★★★ <span>4.9 (2,840 Reviews)</span></div>
+          </div>
+          <h2 class="buy-product-title">MONSTER ORIGINAL GREEN</h2>
+          <p class="buy-product-subtitle">Original Citrus Energy Blend • 500ml (16.9 fl oz)</p>
+
+          <!-- Pack Selection in Hero -->
+          <div class="hero-pack-selector">
+            <span class="selector-label">SELECT PACK SIZE:</span>
+            <div class="pack-buttons" id="hero-pack-options">
+              <button class="pack-btn active" data-pack="single" data-price="359" data-servings="1 Can">
+                <span class="pack-qty">SINGLE</span>
+                <span class="pack-prc">₹359</span>
+              </button>
+              <button class="pack-btn" data-pack="4pack" data-price="480" data-servings="4 Cans">
+                <span class="pack-qty">4-PACK</span>
+                <span class="pack-prc">₹480</span>
+              </button>
+              <button class="pack-btn" data-pack="12pack" data-price="1350" data-servings="12 Cans" data-popular="true">
+                <span class="popular-tag">MOST POPULAR</span>
+                <span class="pack-qty">12-PACK</span>
+                <span class="pack-prc">₹1,350</span>
+              </button>
+              <button class="pack-btn" data-pack="24pack" data-price="2499" data-servings="24 Cans">
+                <span class="save-tag">SAVE 17%</span>
+                <span class="pack-qty">24-VAULT</span>
+                <span class="pack-prc">₹2,499</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Price & CTA Bar -->
+          <div class="buy-box-footer">
+            <div class="buy-total-price">
+              <span class="price-currency">₹</span>
+              <span class="price-val" id="hero-display-price">359</span>
+              <span class="price-unit">/ unit</span>
+            </div>
+            <div class="buy-cta-group">
+              <button class="btn-primary btn-add-hero" id="hero-add-cart-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-cart-svg">
+                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span>ADD TO CART</span>
+              </button>
+              <a href="#flavors-section" class="btn-secondary">ALL FLAVORS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Canvas Loading Screen with React Bits <SplitFlapText /> -->
+      <div class="scrolly-loader" id="scrolly-loader">
+        <div class="loader-top-badge">
+          <span class="pulse-ring"></span> SYSTEM TELEMETRY
+        </div>
+        <div class="loader-claw">
+          <svg viewBox="0 0 48 56" fill="none" class="pulse-claw">
+            <path d="M12 2C11 12 8 26 5 48C8 40 10 24 13 4L12 2Z" fill="#00FF41" />
+            <path d="M25 1C24 14 22 34 19 54C22 43 25 25 27 3L25 1Z" fill="#00FF41" />
+            <path d="M37 6C35 18 34 32 32 50C35 40 37 26 39 8L37 6Z" fill="#00FF41" />
+          </svg>
+        </div>
+        <!-- SplitFlapText Departure Board Container -->
+        <div class="loader-split-flap-wrapper">
+          <div id="split-flap-board"></div>
+        </div>
+        <div class="loader-bar-bg">
+          <div class="loader-bar-fill" id="loader-fill"></div>
+        </div>
+        <div class="loader-status-row">
+          <span class="loader-tag">STATUS: <strong id="loader-status-text">INITIALIZING ASSETS</strong></span>
+          <span class="loader-percentage" id="loader-percent">0%</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- FEATURE BENCHMARK MARQUEE STRIP -->
+  <!-- ======================================================== -->
+  <section class="benchmark-strip fade-section-reveal">
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+          </svg>
+          <span>160MG CAFFEINE & TAURINE ENERGY BLEND</span>
+        </div>
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="10" />
+            <path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24" />
+          </svg>
+          <span>ZERO SUGAR • ZERO GUILT</span>
+        </div>
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+          </svg>
+          <span>FREE SHIPPING OVER ₹999</span>
+        </div>
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>
+          <span>45,000+ FIVE-STAR BEAST RATINGS</span>
+        </div>
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          </svg>
+          <span>100% BEAST LEVEL SATISFACTION</span>
+        </div>
+        <!-- Duplicated for seamless infinite ticker -->
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+          </svg>
+          <span>160MG CAFFEINE & TAURINE ENERGY BLEND</span>
+        </div>
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="12" cy="12" r="10" />
+            <path d="m4.93 4.93 4.24 4.24M14.83 9.17l4.24-4.24M14.83 14.83l4.24 4.24M9.17 14.83l-4.24 4.24" />
+          </svg>
+          <span>ORIGINAL HERITAGE PUNCH</span>
+        </div>
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+          </svg>
+          <span>FREE SHIPPING OVER ₹999</span>
+        </div>
+        <div class="marquee-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>
+          <span>45,000+ FIVE-STAR BEAST RATINGS</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- SECTION 2: E-COMMERCE FLAVOR ARSENAL & 3D FLAVOURS VAULT -->
+  <!-- ======================================================== -->
+  <section class="section-flavors fade-section-reveal" id="flavors-section">
+    <!-- 3D WebGL Flavours Vault InfiniteMenu Gallery Experience -->
+    <div class="infinite-menu-wrapper" id="flavor-vault-canvas-container">
+      <!-- Section Header Overlay above Canvas -->
+      <div class="vault-overlay-header">
+        <h2 class="vault-main-heading">
+          UNLEASH THE BEAST <span class="neon-text">// THE FLAVOUR VAULT</span>
+        </h2>
+      </div>
+
+      <!-- InfiniteMenu Container Root -->
+      <div id="infinite-menu-mount" style="width: 100%; height: 100%;"></div>
+
+
+    </div>
+
+    <div class="container" style="margin-top: 56px;">
+      <div class="section-header">
+        <div class="section-tag">THE FLAVOR ARSENAL</div>
+        <h2 class="section-title">CHOOSE YOUR <span class="text-neon">WEAPON.</span></h2>
+        <p class="section-sub">Engineered for extreme performance, raw stamina, and explosive taste profiles.</p>
+
+        <!-- Flavor Filter Tabs -->
+        <div class="flavor-filters">
+          <button class="filter-btn active" data-filter="all">ALL EDITIONS (6)</button>
+          <button class="filter-btn" data-filter="ultra">ULTRA ZERO SUGAR</button>
+          <button class="filter-btn" data-filter="juice">JUICE MONSTER</button>
+          <button class="filter-btn" data-filter="original">ORIGINAL HERITAGE</button>
+        </div>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div class="products-grid" id="products-grid">
+        <!-- Rendered dynamically by script.js with 3D tilt, high-res images, pack selectors, and quick-add -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ======================================================== -->
+  <!-- SECTION 3: CUSTOM 12-PACK VAULT BUILDER -->
+  <!-- ======================================================== -->
+  <section class="section-vault-builder fade-section-reveal" id="vault-builder">
+    <div class="container">
+      <div class="vault-container-box">
+        <div class="vault-builder-info">
+          <div class="section-tag text-neon">INTERACTIVE CRATE STUDIO</div>
+          <h2 class="vault-title">BUILD YOUR CUSTOM <span class="highlight-green">12-PACK VAULT</span></h2>
+          <p class="vault-desc">
+            Mix and match your dream flavor lineup. Fill all 12 slots to unlock exclusive <strong>15% bundle
+              savings</strong>, free priority cold-pack shipping, and a collector Monster decal pack.
+          </p>
+
+          <!-- Live Crate Capacity Visualizer -->
+          <div class="vault-progress-area">
+            <div class="vault-progress-header">
+              <span class="vault-count-label">VAULT CRATE CAPACITY:</span>
+              <span class="vault-count-val"><strong id="vault-count">0</strong> / 12 CANS</span>
+            </div>
+            <div class="vault-slots-grid" id="vault-slots">
+              <!-- 12 visual slots generated by JS -->
+            </div>
+            <div class="vault-discount-status" id="vault-status-msg">
+              Add 12 cans to unlock 15% discount + free shipping!
+            </div>
+          </div>
+
+          <!-- Total & Crate Add Button -->
+          <div class="vault-checkout-strip">
+            <div class="vault-pricing">
+              <span class="vault-price-label">BUNDLE TOTAL:</span>
+              <div class="vault-price-flex">
+                <span class="vault-strike-price" id="vault-strike">₹1,500</span>
+                <span class="vault-actual-price" id="vault-total">₹0</span>
+              </div>
+            </div>
+            <button class="btn-primary btn-vault-add" id="btn-add-vault-cart" disabled>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="cart-icon">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+              <span>LOCK & ADD VAULT TO CART</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Flavor Picker Grid for Vault -->
+        <div class="vault-flavor-selector">
+          <div class="selector-title">SELECT CANS TO PACK:</div>
+          <div class="vault-picker-grid" id="vault-picker-list">
+            <!-- Populated dynamically with +/- selectors for each flavor -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- SECTION 4: THE PERFORMANCE LAB -->
+  <!-- ======================================================== -->
+  <section class="section-lab fade-section-reveal" id="performance-lab">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag text-neon">BIO-ENERGY ARCHITECTURE</div>
+        <h2 class="section-title">THE PERFORMANCE <span class="text-neon">LAB.</span></h2>
+        <p class="section-sub">Every drop is calibrated to push human reflexes, physical stamina, and cognitive focus
+          past normal limits.</p>
+      </div>
+
+      <div class="lab-grid">
+        <!-- Card 1 -->
+        <div class="lab-card">
+          <div class="lab-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00FF41" stroke-width="2">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <h3 class="lab-card-title">160MG CAFFEINE MATRIX</h3>
+          <p class="lab-card-body">
+            Calibrated for clean, smooth neural activation without the dreaded mid-afternoon crash. Extracted from
+            pharmaceutical-grade botanical sources.
+          </p>
+          <div class="lab-stat">
+            <span class="stat-number">+42%</span>
+            <span class="stat-text">Reaction Time & Alertness</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="lab-card">
+          <div class="lab-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#FF7A3D" stroke-width="2">
+              <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"></path>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+          </div>
+          <h3 class="lab-card-title">PANAX GINSENG & TAURINE</h3>
+          <p class="lab-card-body">
+            Ancient adaptogenic roots married with an amino acid powerhouse to support cellular mitochondrial ATP
+            generation and muscle recovery.
+          </p>
+          <div class="lab-stat">
+            <span class="stat-number">2.5X</span>
+            <span class="stat-text">Prolonged Aerobic Stamina</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="lab-card">
+          <div class="lab-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#00E5FF" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+          </div>
+          <h3 class="lab-card-title">BIO-ACTIVE B-COMPLEX</h3>
+          <p class="lab-card-body">
+            High-potency Vitamins B3 (Niacinamide), B5 (Pantothenic Acid), B6 (Pyridoxine), and B12 to convert
+            carbohydrates into usable kinetic fuel.
+          </p>
+          <div class="lab-stat">
+            <span class="stat-number">100%</span>
+            <span class="stat-text">Daily Recommended Value</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="lab-card">
+          <div class="lab-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#B339EC" stroke-width="2">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="lab-card-title">L-CARNITINE & INOSITOL</h3>
+          <p class="lab-card-body">
+            Cellular fatty-acid transporter ensuring that stamina is drawn directly from biological energy reserves
+            during high-intensity training.
+          </p>
+          <div class="lab-stat">
+            <span class="stat-number">ZERO</span>
+            <span class="stat-text">Artificial Jitters & Crash</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- SECTION 5: ATHLETES & EXTREME SPORTS HERO BANNER -->
+  <!-- ======================================================== -->
+  <section class="section-athletes fade-section-reveal" id="athletes-section">
+    <div class="athlete-banner-wrapper">
+      <img src="Assets/athlete_motocross.jpg" alt="Monster Energy Motocross Action" class="athlete-bg-img"
+        loading="lazy">
+      <div class="athlete-overlay">
+        <div class="container athlete-content">
+          <div class="badge-pill pill-motocross">MOTOCROSS // SUPERCROSS // UFC</div>
+          <h2 class="athlete-headline">
+            BUILT DIFFERENT.<br>
+            FOR A <span class="highlight-green">DIFFERENT BREED.</span>
+          </h2>
+          <p class="athlete-subtext">
+            "When you're launching 70 feet over a triple jump at 50 MPH in the pouring rain, hesitation is not an
+            option. Monster is our blood type."
+          </p>
+          <div class="athlete-stats-row">
+            <div class="athlete-stat-box">
+              <span class="stat-val">340+</span>
+              <span class="stat-lbl">Global Championships</span>
+            </div>
+            <div class="athlete-stat-box">
+              <span class="stat-val">42</span>
+              <span class="stat-lbl">X-Games Gold Medals</span>
+            </div>
+            <div class="athlete-stat-box">
+              <span class="stat-val">100%</span>
+              <span class="stat-lbl">Dedicated Rebellion</span>
+            </div>
+          </div>
+          <a href="https://www.instagram.com/web_pros?obrf=MWt5c3VkMGxkZzVvbw==" target="_blank" rel="noopener noreferrer" class="btn-primary athlete-cta">JOIN THE MONSTER ARMY</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- SECTION 6: REVIEWS & SOCIAL HYPE -->
+  <!-- ======================================================== -->
+  <section class="section-reviews fade-section-reveal" id="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag text-neon">COMMUNITY FEEDBACK</div>
+        <h2 class="section-title">PRAISE FROM THE <span class="text-neon">ARMY.</span></h2>
+        <p class="section-sub">Over 45,000 verified reviews across motorsport athletes, esports champions, and midnight
+          creators.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <!-- Review 1 -->
+        <div class="review-card">
+          <div class="review-top">
+            <div class="stars">★★★★★</div>
+            <span class="review-flavor-tag">Ultra Peachy Keen</span>
+          </div>
+          <h4 class="review-title">"Best Ultra flavor they have EVER released!"</h4>
+          <p class="review-text">
+            The peach flavor tastes like genuine orchard fruit rather than synthetic syrup. Zero sugar and it gives me
+            laser focus for 6-hour endurance sim racing sessions.
+          </p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">DK</div>
+            <div>
+              <div class="reviewer-name">Dave "Apex" Kowalski</div>
+              <div class="reviewer-verified">✓ Verified Beast Buyer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card">
+          <div class="review-top">
+            <div class="stars">★★★★★</div>
+            <span class="review-flavor-tag">Original Green</span>
+          </div>
+          <h4 class="review-title">"The immortal GOAT of energy drinks."</h4>
+          <p class="review-text">
+            Nothing compares to cracking open a cold green claw can at 6 AM before track day. Consistent, legendary
+            energy that never lets you down.
+          </p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">MR</div>
+            <div>
+              <div class="reviewer-name">Arbab Riffat BKL</div>
+              <div class="reviewer-verified">✓ Verified Beast Buyer</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card">
+          <div class="review-top">
+            <div class="stars">★★★★★</div>
+            <span class="review-flavor-tag">Mango Loco</span>
+          </div>
+          <h4 class="review-title">"The juice blend is unmatched."</h4>
+          <p class="review-text">
+            Tastes like heaven in a can. The mango explosion is unreal, and having it delivered in the 12-pack custom
+            vault saves me money every single month.
+          </p>
+          <div class="reviewer-info">
+            <div class="reviewer-avatar">SL</div>
+            <div>
+              <div class="reviewer-name">Sarah Lin</div>
+              <div class="reviewer-verified">✓ Verified Beast Buyer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================== -->
+  <!-- FOOTER & NEWSLETTER -->
+  <!-- ======================================================== -->
+  <footer class="main-footer fade-section-reveal">
+    <div class="container">
+      <!-- Newsletter Box -->
+      <div class="footer-newsletter">
+        <div class="newsletter-left">
+          <h3 class="newsletter-heading">JOIN THE MONSTER VIP CORPS</h3>
+          <p class="newsletter-desc">Unlock secret early drops, athlete signings, and exclusive 15% discount codes right
+            into your inbox.</p>
+        </div>
+        <form class="newsletter-form" id="newsletter-form"
+          onsubmit="event.preventDefault(); window.handleNewsletter();">
+          <input type="email" placeholder="ENTER YOUR EMAIL..." required class="newsletter-input" id="news-email">
+          <button type="submit" class="btn-primary btn-newsletter">SUBSCRIBE</button>
+        </form>
+      </div>
+
+      <div class="footer-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col col-brand">
+          <div class="brand-logo footer-logo">
+            <svg viewBox="0 0 48 56" fill="none" class="claw-icon" style="width: 32px; height: 38px;">
+              <path d="M12 2C11 12 8 26 5 48C8 40 10 24 13 4L12 2Z" fill="#00FF41" />
+              <path d="M25 1C24 14 22 34 19 54C22 43 25 25 27 3L25 1Z" fill="#00FF41" />
+              <path d="M37 6C35 18 34 32 32 50C35 40 37 26 39 8L37 6Z" fill="#00FF41" />
+            </svg>
+            <div class="brand-text">
+              <span class="brand-name">MONSTER</span>
+              <span class="brand-sub">ENERGY</span>
+            </div>
+          </div>
+          <p class="footer-motto">
+            Tear into a can of Monster Energy, the meanest energy drink on the planet. Crafted for those who never
+            settle.
+          </p>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram" class="social-link">IG</a>
+            <a href="#" aria-label="TikTok" class="social-link">TT</a>
+            <a href="#" aria-label="YouTube" class="social-link">YT</a>
+            <a href="#" aria-label="X Twitter" class="social-link">X</a>
+            <a href="#" aria-label="Discord" class="social-link">DC</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">ARSENAL</h4>
+          <ul class="footer-links">
+            <li><a href="#flavors-section">Ultra Zero Sugar</a></li>
+            <li><a href="#flavors-section">Juice Monster</a></li>
+            <li><a href="#flavors-section">Original Heritage</a></li>
+            <li><a href="#vault-builder">Custom 12-Pack Crate</a></li>
+            <li><a href="#hero-experience">Ultra Peachy Keen Drop</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company & Athletes -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">CULTURE</h4>
+          <ul class="footer-links">
+            <li><a href="#athletes-section">Motocross & Supercross</a></li>
+            <li><a href="#athletes-section">UFC Warriors</a></li>
+            <li><a href="#athletes-section">Formula 1 & Rally</a></li>
+            <li><a href="#athletes-section">Esports Champions</a></li>
+            <li><a href="#performance-lab">Performance Science</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Support & Legal -->
+        <div class="footer-col">
+          <h4 class="footer-col-title">SUPPORT</h4>
+          <ul class="footer-links">
+            <li><a href="#"
+                onclick="alert('Track Order: Enter your tracking code in checkout confirmation email.'); return false;">Track
+                Your Order</a></li>
+            <li><a href="#"
+                onclick="alert('Shipping policy: 2-Day Priority Cold Pack on all orders over ₹999.'); return false;">Shipping
+                Policy</a></li>
+            <li><a href="#"
+                onclick="alert('Customer support available 24/7 at beast-support@monsterenergy.com'); return false;">Help
+                Desk 24/7</a></li>
+            <li><a href="#" onclick="alert('Monster Energy 100% Beast Guarantee'); return false;">Returns & Refunds</a>
+            </li>
+            <li><a href="#" onclick="alert('Privacy Policy updated 2026.'); return false;">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Monster Beverage Corporation. Monster Energy®, the M-Claw logo, and Unleash the Beast® are registered
+          trademarks. All rights reserved.</p>
+        <p class="fda-disclaimer">Consumer warning: Not recommended for children, people sensitive to caffeine, pregnant
+          women, or women who are nursing.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================================================== -->
+  <!-- SLIDE-OVER E-COMMERCE CART DRAWER -->
+  <!-- ======================================================== -->
+  <div class="cart-drawer-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="cart-drawer-header">
+      <div class="cart-title-row">
+        <div class="cart-heading-wrap">
+          <h3 class="cart-heading">YOUR ARSENAL CART</h3>
+          <span class="cart-items-count" id="cart-header-count">(0 items)</span>
+        </div>
+        <button class="cart-close-btn" id="close-cart-btn" aria-label="Close Cart">✕</button>
+      </div>
+
+      <!-- Free Shipping Goal Meter -->
+      <div class="free-shipping-box">
+        <div class="shipping-info-text" id="shipping-goal-text">
+          Add <strong>₹999</strong> more to unlock <strong>FREE 2-DAY COLD SHIPPING</strong>
+        </div>
+        <div class="shipping-meter-bg">
+          <div class="shipping-meter-fill" id="shipping-meter-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Items Scroll List -->
+    <div class="cart-items-list" id="cart-items-container">
+      <!-- Generated dynamically by script.js -->
+      <div class="empty-cart-state" id="empty-cart-msg">
+        <div class="empty-icon">🥫</div>
+        <h4>YOUR CART IS EMPTY</h4>
+        <p>You haven't added any fuel yet. Unleash the beast and pick your poison!</p>
+        <button class="btn-primary btn-empty-shop"
+          onclick="window.closeCart(); window.location.hash='#flavors-section';">
+          BROWSE FLAVORS
+        </button>
+      </div>
+    </div>
+
+    <!-- Cart Footer & Checkout -->
+    <div class="cart-drawer-footer" id="cart-footer">
+      <!-- Promo Code Section -->
+      <div class="promo-code-wrap">
+        <input type="text" placeholder="PROMO CODE (e.g. UNLEASH15)" id="promo-input" class="promo-input">
+        <button class="btn-promo-apply" id="apply-promo-btn">APPLY</button>
+      </div>
+      <div class="promo-feedback" id="promo-feedback"></div>
+
+      <!-- Price Breakdown -->
+      <div class="cart-summary-table">
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">₹0</span>
+        </div>
+        <div class="summary-line line-discount" id="cart-discount-row" style="display: none;">
+          <span>Discount (15% OFF)</span>
+          <span class="text-neon" id="cart-discount">-₹0</span>
+        </div>
+        <div class="summary-line">
+          <span>Cold-Pack Shipping</span>
+          <span id="cart-shipping">₹99</span>
+        </div>
+        <div class="summary-line line-total">
+          <span>ESTIMATED TOTAL</span>
+          <span class="summary-total-val" id="cart-total">₹0</span>
+        </div>
+      </div>
+
+      <!-- Checkout Button -->
+      <button class="btn-primary btn-checkout" id="checkout-btn">
+        <span class="lock-icon">🔒</span>
+        <span>PROCEED TO CHECKOUT</span>
+      </button>
+
+      <div class="cart-guarantee">
+        <span>⚡ 100% Secure Encrypted Checkout</span>
+        <span>•</span>
+        <span>❄️ Fresh Cold Guarantee</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: PRODUCT QUICK VIEW MODAL -->
+  <!-- ======================================================== -->
+  <div class="modal-overlay" id="quick-view-overlay">
+    <div class="quick-view-modal" id="quick-view-modal">
+      <button class="modal-close-btn" id="close-modal-btn">✕</button>
+      <div class="quick-view-content" id="quick-view-body">
+        <!-- Rendered by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- MODAL: SIMULATED CHECKOUT MODAL WITH CELEBRATION CONFETTI -->
+  <!-- ======================================================== -->
+  <div class="modal-overlay" id="checkout-overlay">
+    <div class="checkout-modal" id="checkout-modal">
+      <button class="modal-close-btn" id="close-checkout-btn">✕</button>
+
+      <!-- Checkout Step 1: Payment Form -->
+      <div class="checkout-step" id="checkout-step-form">
+        <div class="checkout-header">
+          <div class="claw-icon-small">
+            <svg viewBox="0 0 48 56" fill="none" style="width: 28px; height: 32px;">
+              <path d="M12 2C11 12 8 26 5 48C8 40 10 24 13 4L12 2Z" fill="#00FF41" />
+              <path d="M25 1C24 14 22 34 19 54C22 43 25 25 27 3L25 1Z" fill="#00FF41" />
+              <path d="M37 6C35 18 34 32 32 50C35 40 37 26 39 8L37 6Z" fill="#00FF41" />
+            </svg>
+          </div>
+          <div>
+            <h3>EXPRESS BEAST CHECKOUT</h3>
+            <p>Complete your order to deploy fuel to your door</p>
+          </div>
+        </div>
+
+        <form id="simulated-checkout-form" onsubmit="event.preventDefault(); window.completeCheckout();">
+          <div class="form-section-title">1. SHIPPING DESTINATION</div>
+          <div class="form-row">
+            <input type="text" placeholder="Full Name" required class="form-input" value="Alex Ryder">
+            <input type="email" placeholder="Email Address" required class="form-input"
+              value="alex.ryder@monsterenergy.com">
+          </div>
+          <div class="form-row">
+            <input type="text" placeholder="Street Address" required class="form-input" value="777 Adrenaline Way">
+            <input type="text" placeholder="City & State" required class="form-input" value="Huntington Beach, CA">
+          </div>
+
+          <div class="form-section-title">2. PAYMENT METHOD</div>
+          <div class="payment-tabs">
+            <label class="pay-option active">
+              <input type="radio" name="paymethod" checked>
+              <span>⚡ Apple Pay / Google Pay</span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="paymethod">
+              <span>💳 Credit / Debit Card</span>
+            </label>
+          </div>
+
+          <div class="checkout-summary-bar">
+            <span>ORDER DUE TODAY:</span>
+            <strong class="checkout-final-sum" id="checkout-modal-sum">₹0</strong>
+          </div>
+
+          <button type="submit" class="btn-primary w-full btn-pay-now">
+            CONFIRM & AUTHORIZE ORDER
+          </button>
+        </form>
+      </div>
+
+      <!-- Checkout Step 2: Success Confirmation with Confetti -->
+      <div class="checkout-step checkout-success" id="checkout-step-success" style="display: none;">
+        <div class="success-icon">🎉</div>
+        <h2 class="success-title">ORDER DISPATCHED!</h2>
+        <p class="success-subtitle">Your Monster Energy order is locked in and speeding towards you in cryogenic cold
+          packs.</p>
+
+        <div class="order-details-card">
+          <div class="od-line">
+            <span>Tracking Number:</span>
+            <strong class="text-neon" id="generated-tracking">ME-8947-2026X</strong>
+          </div>
+          <div class="od-line">
+            <span>Delivery Method:</span>
+            <span>2-Day Cold-Pack Express</span>
+          </div>
+          <div class="od-line">
+            <span>Estimated Delivery:</span>
+            <span>Within 48 Hours</span>
+          </div>
+        </div>
+
+        <button class="btn-primary" onclick="window.closeCheckout(); window.clearCart();">
+          CONTINUE TO STORE
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DETAIL NUTRITIONAL TELEMETRY MODAL -->
+  <div class="flavor-modal-overlay" id="flavor-detail-modal" aria-hidden="true" role="dialog">
+    <div class="flavor-modal-card">
+      <button class="flavor-modal-close-btn" id="modal-close-btn" aria-label="Close Modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div class="flavor-modal-content">
+        <div class="flavor-modal-visual">
+          <img src="Assets/products/original_green.jpg" alt="Monster Energy" class="flavor-modal-can-img"
+            id="modal-can-img">
+        </div>
+        <div class="flavor-modal-info">
+          <span class="modal-series-badge" id="modal-series">ORIGINAL HERITAGE</span>
+          <h2 class="flavor-modal-title" id="modal-title">MONSTER ENERGY ORIGINAL</h2>
+          <p class="flavor-modal-desc" id="modal-desc">
+            Tear into a can of the meanest energy drink on the planet. Smooth, sweet, and packed with 160mg of raw
+            energy.
+          </p>
+
+          <div class="flavor-telemetry-box">
+            <div class="telemetry-title">⚡ FORMULATION TELEMETRY & NUTRITION</div>
+            <div class="telemetry-specs-grid">
+              <div class="telemetry-spec-item">
+                <span class="telemetry-spec-k">CAFFEINE</span>
+                <span class="telemetry-spec-v highlight" id="modal-caffeine">160 MG</span>
+              </div>
+              <div class="telemetry-spec-item">
+                <span class="telemetry-spec-k">TAURINE</span>
+                <span class="telemetry-spec-v highlight" id="modal-taurine">1000 MG</span>
+              </div>
+              <div class="telemetry-spec-item">
+                <span class="telemetry-spec-k">B-VITAMINS</span>
+                <span class="telemetry-spec-v" id="modal-vitamins">B3, B6, B12, B2</span>
+              </div>
+              <div class="telemetry-spec-item">
+                <span class="telemetry-spec-k">CALORIES</span>
+                <span class="telemetry-spec-v" id="modal-calories">210 CAL</span>
+              </div>
+              <div class="telemetry-spec-item">
+                <span class="telemetry-spec-k">ELECTROLYTES</span>
+                <span class="telemetry-spec-v" id="modal-electrolytes">SODIUM + POTASSIUM</span>
+              </div>
+              <div class="telemetry-spec-item">
+                <span class="telemetry-spec-k">PRICE</span>
+                <span class="telemetry-spec-v highlight" id="modal-price">₹359</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-actions-row">
+            <button class="btn-modal-buy" id="modal-buy-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              <span>BUY NOW // FIND IN STORE</span>
+            </button>
+            <button class="btn-modal-locator" id="modal-locate-btn">
+              <span>STORE LOCATOR</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio Engine & Scripts -->
+  <script src="sound.js"></script>
+  <script src="SplitFlapText.js"></script>
+  <script src="InfiniteMenu.js"></script>
+  <script src="PillNav.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
